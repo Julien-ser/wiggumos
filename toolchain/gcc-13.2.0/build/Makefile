@@ -47,7 +47,7 @@ target=x86_64-pc-elf
 
 program_transform_name = s&^&x86_64-elf-&
 
-prefix = /home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install
+prefix = /home/julien/.local
 exec_prefix = ${prefix}
 
 srcdir = ..
@@ -93,7 +93,7 @@ MAINTAINER_MODE_TRUE = #
 # -------------------------------------------------
 
 # The gcc driver likes to know the arguments it was configured with.
-TOPLEVEL_CONFIGURE_ARGUMENTS=../configure --target=x86_64-elf --prefix=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install --disable-nls --enable-languages=c --without-headers --with-gmp=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../gmp-6.3.0 --with-mpfr=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../mpfr-4.2.1 --with-mpc=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../libmpc-1.3.1
+TOPLEVEL_CONFIGURE_ARGUMENTS=../configure --target=x86_64-elf --prefix=/home/julien/.local --disable-nls --enable-languages=c --without-headers
 
 tooldir = ${exec_prefix}/x86_64-elf
 build_tooldir = ${exec_prefix}/x86_64-elf
@@ -114,7 +114,7 @@ host_shared = no
 BUILD_SUBDIR = build-x86_64-pc-linux-gnu
 # This is set by the configure script to the arguments to use when configuring
 # directories built for the build system.
-BUILD_CONFIGARGS =  --cache-file=./config.cache '--prefix=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install' '--disable-nls' '--without-headers' '--with-gmp=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../gmp-6.3.0' '--with-mpfr=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../mpfr-4.2.1' '--with-mpc=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../libmpc-1.3.1' '--enable-languages=c,lto' --program-transform-name='s&^&x86_64-elf-&' --disable-option-checking --with-build-subdir="$(BUILD_SUBDIR)"
+BUILD_CONFIGARGS =  --cache-file=./config.cache '--prefix=/home/julien/.local' '--disable-nls' '--without-headers' '--enable-languages=c,lto' --program-transform-name='s&^&x86_64-elf-&' --disable-option-checking --with-build-subdir="$(BUILD_SUBDIR)"
 
 # Linker flags to use on the host, for stage1 or when not
 # bootstrapping.
@@ -183,7 +183,7 @@ SUBDIRS =  intl libiberty zlib libbacktrace libcpp libcody libdecnumber fixinclu
 TARGET_CONFIGDIRS =  libgcc libssp libquadmath
 # This is set by the configure script to the arguments to use when configuring
 # directories built for the host system.
-HOST_CONFIGARGS =  --cache-file=./config.cache  '--prefix=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install' '--disable-nls' '--without-headers' '--with-gmp=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../gmp-6.3.0' '--with-mpfr=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../mpfr-4.2.1' '--with-mpc=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../libmpc-1.3.1' '--enable-languages=c,lto' --program-transform-name='s&^&x86_64-elf-&' --disable-option-checking
+HOST_CONFIGARGS =  --cache-file=./config.cache  '--prefix=/home/julien/.local' '--disable-nls' '--without-headers' '--enable-languages=c,lto' --program-transform-name='s&^&x86_64-elf-&' --disable-option-checking
 # Host programs are put under this directory, which is . except if building
 # with srcdir=..
 HOST_SUBDIR = .
@@ -272,7 +272,7 @@ POSTSTAGE1_HOST_EXPORTS = \
 TARGET_SUBDIR = x86_64-elf
 # This is set by the configure script to the arguments to use when configuring
 # directories built for the target.
-TARGET_CONFIGARGS = --cache-file=./config.cache --enable-multilib --with-cross-host=x86_64-pc-linux-gnu   '--prefix=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install' '--disable-nls' '--without-headers' '--enable-languages=c,lto' --program-transform-name='s&^&x86_64-elf-&' --disable-option-checking --with-target-subdir="$(TARGET_SUBDIR)"
+TARGET_CONFIGARGS = --cache-file=./config.cache --enable-multilib --with-cross-host=x86_64-pc-linux-gnu   '--prefix=/home/julien/.local' '--disable-nls' '--without-headers' '--enable-languages=c,lto' --program-transform-name='s&^&x86_64-elf-&' --disable-option-checking --with-target-subdir="$(TARGET_SUBDIR)"
 # This is the list of variables to export in the environment when
 # configuring subdirectories for the target system.
 BASE_TARGET_EXPORTS = \
@@ -315,8 +315,8 @@ NORMAL_TARGET_EXPORTS = \
 	CXX="$(CXX_FOR_TARGET) $(XGCC_FLAGS_FOR_TARGET) $$TFLAGS"; export CXX;
 
 # Where to find GMP
-HOST_GMPLIBS = -L/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../gmp-6.3.0/lib -L/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../mpfr-4.2.1/lib -L/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../libmpc-1.3.1/lib -lmpc -lmpfr -lgmp
-HOST_GMPINC = -I/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../gmp-6.3.0/include -I/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../mpfr-4.2.1/include -I/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../libmpc-1.3.1/include 
+HOST_GMPLIBS = -lmpc -lmpfr -lgmp
+HOST_GMPINC = 
 
 # Where to find isl
 HOST_ISLLIBS =  -lisl
@@ -584,8 +584,8 @@ do-compare3 = $(do-compare)
 # Programs producing files for the TARGET machine
 # -----------------------------------------------
 
-AR_FOR_TARGET=x86_64-elf-ar
-AS_FOR_TARGET=x86_64-elf-as
+AR_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/ar
+AS_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/as
 CC_FOR_TARGET=$(STAGE_CC_WRAPPER) $$r/$(HOST_SUBDIR)/gcc/xgcc -B$$r/$(HOST_SUBDIR)/gcc/
 
 # If GCC_FOR_TARGET is not overriden on the command line, then this
@@ -601,16 +601,16 @@ GDC_FOR_TARGET=$(STAGE_CC_WRAPPER) x86_64-elf-gdc
 GM2_FOR_TARGET=$(STAGE_CC_WRAPPER) x86_64-elf-gm2
 DLLTOOL_FOR_TARGET=x86_64-elf-dlltool
 DSYMUTIL_FOR_TARGET=x86_64-elf-dsymutil
-LD_FOR_TARGET=x86_64-elf-ld
+LD_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/ld
 
 LIPO_FOR_TARGET=x86_64-elf-lipo
-NM_FOR_TARGET=x86_64-elf-nm
-OBJDUMP_FOR_TARGET=x86_64-elf-objdump
-OBJCOPY_FOR_TARGET=x86_64-elf-objcopy
+NM_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/nm
+OBJDUMP_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/objdump
+OBJCOPY_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/objcopy
 OTOOL_FOR_TARGET=x86_64-elf-otool
-RANLIB_FOR_TARGET=x86_64-elf-ranlib
-READELF_FOR_TARGET=x86_64-elf-readelf
-STRIP_FOR_TARGET=x86_64-elf-strip
+RANLIB_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/ranlib
+READELF_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/readelf
+STRIP_FOR_TARGET=/home/julien/.local/x86_64-elf/bin/strip
 WINDRES_FOR_TARGET=x86_64-elf-windres
 WINDMC_FOR_TARGET=x86_64-elf-windmc
 

@@ -22,7 +22,7 @@
 libiberty_topdir = ../../../libiberty/..
 srcdir = ../../../libiberty
 
-prefix = /home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install
+prefix = /home/julien/.local
 
 exec_prefix = ${prefix}
 bindir = ${exec_prefix}/bin

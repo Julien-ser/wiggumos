@@ -49,10 +49,10 @@ NOLTO_FLAGS = -fno-lto
 
 datarootdir = ${prefix}/share
 datadir = ${datarootdir}
-exec_prefix = /home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install
+exec_prefix = /home/julien/.local
 libdir = ${exec_prefix}/lib
 localedir = $(datadir)/locale
-prefix = /home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install
+prefix = /home/julien/.local
 
 ADDITIONAL_OBJS = 
 

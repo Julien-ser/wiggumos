@@ -3,7 +3,7 @@
 # License: Apache v2.0
 
 srcdir := ../../libcody
-prefix := /home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install
+prefix := /home/julien/.local
 exec_prefix := ${prefix}
 bindir := ${exec_prefix}/bin
 libdir := ${exec_prefix}/lib
@@ -104,7 +104,7 @@ Makefile: config.status Makefile.in
 endif
 
 config.status: $(srcdir)/configure $(srcdir)/config.h.in
-	if test -x $@; then ./$@ -recheck; else $<  '--srcdir=../../libcody' '--cache-file=./config.cache' '--prefix=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install' '--disable-nls' '--without-headers' '--with-gmp=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../gmp-6.3.0' '--with-mpfr=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../mpfr-4.2.1' '--with-mpc=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../../libmpc-1.3.1' '--enable-languages=c,lto' '--program-transform-name=s&^&x86_64-elf-&' '--disable-option-checking' '--build=x86_64-pc-linux-gnu' '--host=x86_64-pc-linux-gnu' '--target=x86_64-elf' 'build_alias=x86_64-pc-linux-gnu' 'host_alias=x86_64-pc-linux-gnu' 'target_alias=x86_64-elf' 'CXX=g++' 'CXXFLAGS=-g -O2  ' 'LDFLAGS=-static-libstdc++ -static-libgcc '; fi
+	if test -x $@; then ./$@ -recheck; else $<  '--srcdir=../../libcody' '--cache-file=./config.cache' '--prefix=/home/julien/.local' '--disable-nls' '--without-headers' '--enable-languages=c,lto' '--program-transform-name=s&^&x86_64-elf-&' '--disable-option-checking' '--build=x86_64-pc-linux-gnu' '--host=x86_64-pc-linux-gnu' '--target=x86_64-elf' 'build_alias=x86_64-pc-linux-gnu' 'host_alias=x86_64-pc-linux-gnu' 'target_alias=x86_64-elf' 'CXX=g++' 'CXXFLAGS=-g -O2  ' 'LDFLAGS=-static-libstdc++ -static-libgcc '; fi
 
 mostlyclean::
 

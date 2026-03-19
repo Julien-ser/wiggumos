@@ -53,7 +53,7 @@ if [ x$1 != x ] ; then
   prefix=$1
   shift
 else
-  prefix=/home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install
+  prefix=/home/julien/.local
 fi
 
 # Allow for alternate isysroot in which to find headers

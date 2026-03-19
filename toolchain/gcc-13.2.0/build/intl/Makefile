@@ -26,7 +26,7 @@ SHELL = /bin/sh
 srcdir = ../../intl
 VPATH = $(srcdir)
 
-prefix = /home/julien/Desktop/Free-Wiggum-opencode/projects/wiggumos/toolchain/gcc-13.2.0/build/../install
+prefix = /home/julien/.local
 exec_prefix = ${prefix}
 transform = s&^&x86_64-elf-&
 libdir = ${exec_prefix}/lib
