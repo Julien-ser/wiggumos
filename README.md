@@ -16,7 +16,7 @@ wiggumos is a hobby OS project implementing:
 
 **Phase 1: Planning & Setup** ✅ In Progress
 - ✅ System specifications documented
-- ⏳ Cross-compilation toolchain setup
+- ✅ Cross-compilation toolchain setup (x86_64-elf-gcc 13.2.0 verified)
 - ⏳ Build system creation
 - ⏳ Project structure initialization
 

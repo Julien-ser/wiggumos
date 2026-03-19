@@ -3,7 +3,7 @@
 
 ## Phase 1: Planning & Setup
 - [x] Define system specifications: document target architecture (x86_64), supported features (multitasking, virtual memory), and API design
-- [ ] Set up cross-compilation toolchain: install x86_64-elf GCC/binutils, verify with test compilation of C "hello world"
+- [x] Set up cross-compilation toolchain: install x86_64-elf GCC/binutils, verify with test compilation of C "hello world"
 - [ ] Create build system: implement Makefile or CMake with targets for kernel, bootloader, and userland; include clean and all targets
 - [ ] Initialize project structure: create `kernel/`, `boot/`, `userland/`, `include/`, and `docs/` directories with skeleton files
 
