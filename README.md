@@ -17,8 +17,8 @@ wiggumos is a hobby OS project implementing:
 **Phase 1: Planning & Setup** ✅ In Progress
 - ✅ System specifications documented
 - ✅ Cross-compilation toolchain setup (x86_64-elf-gcc 13.2.0 verified)
-- ⏳ Build system creation
-- ⏳ Project structure initialization
+- ✅ Build system created (Makefile)
+- ✅ Project structure initialized
 
 See [docs/SYSTEM_SPECS.md](docs/SYSTEM_SPECS.md) for complete specifications.
 
@@ -46,15 +46,13 @@ cd gcc-build
 ### Building
 
 ```bash
-# TODO: After build system is created
 make all
 ```
 
 ### Running in QEMU
 
 ```bash
-# TODO: After bootloader is implemented
-qemu-system-x86_64 -drive format=raw,file=wiggumos.img
+make run
 ```
 
 ### Directory Structure
